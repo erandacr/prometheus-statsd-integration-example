@@ -8,7 +8,7 @@ scrape_configs:
 
   metrics_path: '/metrics'
 
-  target_groups:
-  - targets: ['promstatsd_statsd_exporter_1:9102']
+  static_configs:
+  - targets: ['statsd_exporter:9102']
     labels:
       exporter: 'statsd'
